@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Juan Diego P. Dela Paz | Computer Engineering</title>
+<meta name="description" content="Juan Diego P. Dela Paz: Computer Engineering student at FEU Institute of Technology. Embedded systems, hardware integration, and AI-assisted software development.">
+<meta property="og:title" content="Juan Diego P. Dela Paz | Computer Engineering">
+<meta property="og:description" content="Embedded systems, hardware integration, and AI-assisted software development.">
+<meta property="og:url" content="https://jiigu.dev/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #ffffff;
+    --ink: #1b2430;
+    --muted: #5b6573;
+    --rule: #d3d9e0;
+    --band: #eef2f6;
+    --accent: #1f4e8c;
+    --sans: "IBM Plex Sans", system-ui, sans-serif;
+    --cond: "IBM Plex Sans Condensed", "IBM Plex Sans", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 400 1.0625rem/1.6 var(--sans);
+  }
+  a { color: var(--accent); text-underline-offset: 0.18em; }
+  a:hover { text-decoration-thickness: 2px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  .page { max-width: 58rem; margin: 0 auto; padding: 0 1.5rem; }
+
+  /* Header: the one bold element, set like a component datasheet title block */
+  .titleblock {
+    border-bottom: 3px solid var(--ink);
+    padding: 3.5rem 0 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem 2rem;
+    align-items: end;
+  }
+  .titleblock h1 {
+    font: 600 clamp(2.4rem, 6vw, 3.75rem)/1 var(--cond);
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  .titleblock .role {
+    margin: 0.75rem 0 0;
+    font-size: 1.15rem;
+    color: var(--muted);
+    max-width: 34rem;
+  }
+  .partno {
+    text-align: right;
+    font: 500 0.95rem/1.4 var(--cond);
+    color: var(--muted);
+  }
+  .partno strong { display: block; font-size: 1.6rem; color: var(--ink); font-weight: 600; }
+
+  .links {
+    display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem;
+    padding: 0.9rem 0; margin: 0; list-style: none;
+    border-bottom: 1px solid var(--rule);
+    font-weight: 500;
+  }
+
+  section { padding: 2.25rem 0 0.5rem; }
+  h2 {
+    font: 600 1.45rem/1.2 var(--cond);
+    margin: 0 0 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  h3 {
+    font: 600 1.2rem/1.3 var(--cond);
+    margin: 0;
+  }
+  p { margin: 0 0 1rem; max-width: 42rem; }
+
+  .overview { display: grid; grid-template-columns: 1.4fr 1fr; gap: 2rem; }
+
+  table { border-collapse: collapse; width: 100%; font-size: 0.97rem; }
+  caption { text-align: left; font: 600 0.95rem/1.4 var(--cond); color: var(--muted); padding-bottom: 0.35rem; }
+  th, td { text-align: left; vertical-align: top; padding: 0.45rem 0.75rem 0.45rem 0; border-bottom: 1px solid var(--rule); }
+  th { font-weight: 500; color: var(--muted); width: 38%; }
+  thead th { background: var(--band); color: var(--ink); font-weight: 600; padding-left: 0.6rem; width: auto; }
+  thead th:first-child { padding-left: 0.6rem; }
+  .specs td, .specs th { padding-left: 0.6rem; }
+  .num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  .project { padding: 1.4rem 0 1.2rem; border-bottom: 1px solid var(--rule); }
+  .project:last-child { border-bottom: 0; }
+  .project header { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.25rem 1rem; align-items: baseline; margin-bottom: 0.5rem; }
+  .project .meta { color: var(--muted); font-size: 0.95rem; }
+  .project ul { margin: 0.25rem 0 1rem; padding-left: 1.2rem; max-width: 46rem; }
+  .project li { margin-bottom: 0.35rem; }
+  .project .specs { max-width: 34rem; margin-top: 0.5rem; }
+
+  .skills th { width: 11rem; }
+  .certs td:last-child { white-space: nowrap; text-align: right; padding-right: 0; }
+  .note { font-size: 0.92rem; color: var(--muted); }
+
+  footer { margin: 3rem 0 2.5rem; padding-top: 1rem; border-top: 3px solid var(--ink); font-size: 0.9rem; color: var(--muted); }
+  footer table { max-width: 30rem; font-size: 0.9rem; }
+
+  @media (max-width: 40rem) {
+    .titleblock { grid-template-columns: 1fr; padding-top: 2.25rem; }
+    .partno { text-align: left; }
+    .overview { grid-template-columns: 1fr; gap: 1rem; }
+    th { width: 42%; }
+    .skills th { width: 7.5rem; }
+  }
+  @media print {
+    .links a { color: var(--ink); }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="titleblock">
+    <div>
+      <h1>Juan Diego P. Dela Paz</h1>
+      <p class="role">Computer Engineering student building embedded systems, hardware integrations, and AI-assisted software.</p>
+    </div>
+    <div class="partno">BS Computer Engineering<strong>FEU Tech, 2027</strong></div>
+  </header>
+
+  <ul class="links">
+    <li><a href="mailto:juandiegoparasdelapaz@gmail.com">juandiegoparasdelapaz@gmail.com</a></li>
+    <li><a href="https://github.com/JiiGu">GitHub</a></li>
+    <li><a href="https://linkedin.com/in/jd-dela-paz">LinkedIn</a></li>
+  </ul>
+
+  <main>
+    <section aria-labelledby="overview">
+      <h2 id="overview">Overview</h2>
+      <div class="overview">
+        <div>
+          <p>I'm a Computer Engineering student at FEU Institute of Technology in Manila. I led the build of a working thesis prototype, a smart Scrabble board, and I currently lead a four-person game development team.</p>
+          <p>I'm looking for an internship or OJT placement in software, embedded systems, or game development.</p>
+        </div>
+        <table>
+          <caption>At a glance</caption>
+          <tbody>
+            <tr><th scope="row">School</th><td>FEU Institute of Technology</td></tr>
+            <tr><th scope="row">Program</th><td>BS Computer Engineering, 2023 to present</td></tr>
+            <tr><th scope="row">Graduation</th><td>Expected 2027</td></tr>
+            <tr><th scope="row">Location</th><td>Metro Manila, Philippines</td></tr>
+            <tr><th scope="row">Certified in</th><td>Cisco CCST Networking, Java, Python</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="projects">
+      <h2 id="projects">Projects</h2>
+
+      <article class="project">
+        <header>
+          <h3>ScrabBit: An Intelligent Scrabble Board</h3>
+          <span class="meta">Thesis project, Sep to Nov 2026</span>
+        </header>
+        <ul>
+          <li>Led the design and build of a smart Scrabble board: an Arduino Mega reads tiles across a 225-square contact grid through multiplexers, and a Raspberry Pi 4B (Python) validates words and computes scores in real time.</li>
+          <li>As lead proponent, handled the software, embedded firmware, hardware assembly, and integration.</li>
+        </ul>
+        <table class="specs">
+          <caption>Test results</caption>
+          <thead><tr><th scope="col">Measure</th><th scope="col">Result</th></tr></thead>
+          <tbody>
+            <tr><td>Accuracy, 10 panel-supervised test runs</td><td class="num">100%</td></tr>
+            <tr><td>Mean response time, 366 confirmations</td><td class="num">47.9 ms</td></tr>
+            <tr><td>Worst response time</td><td class="num">59.4 ms</td></tr>
+            <tr><td>Target</td><td class="num">1 s</td></tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article class="project">
+        <header>
+          <h3>Kingdom Clash TD <span class="meta">(working title)</span></h3>
+          <span class="meta">Roblox team project, Nov 2026 to present</span>
+        </header>
+        <ul>
+          <li>Lead a four-person team building a co-op tower defense game in Luau with GitHub, Rojo, and Claude Code.</li>
+          <li>Set up the team's repository, workflow, and PR review rules; core gameplay loop completed in Nov 2026.</li>
+        </ul>
+      </article>
+
+      <article class="project">
+        <header>
+          <h3>Campus Lost and Found</h3>
+          <span class="meta">Course project, 7 members, 2026</span>
+        </header>
+        <ul>
+          <li>Built the backend foundation the other six members developed against: PostgreSQL schema and seed data, and an Express REST API (models, controllers, routes, middleware), using AI-assisted development.</li>
+        </ul>
+        <p><a href="https://campus-lost-and-found-frontend-snowy.vercel.app">Open the live app</a></p>
+      </article>
+
+      <article class="project">
+        <header>
+          <h3>HushNet: Noise Monitoring System</h3>
+          <span class="meta">Course project, 2026</span>
+        </header>
+        <ul>
+          <li>Built ESP32 noise monitors with a MAX4466 microphone, using baseline calibration, envelope detection, and moving-average filtering for stable real-time readings.</li>
+          <li>Implemented hysteresis-based alarm logic with buzzer self-noise suppression, a live TFT and 9-LED display, and ESP-NOW links for remote monitoring and synchronized alarms.</li>
+        </ul>
+        <p><a href="https://github.com/JiiGu/HushNet">View the source on GitHub</a></p>
+      </article>
+    </section>
+
+    <section aria-labelledby="experience">
+      <h2 id="experience">Experience</h2>
+      <article class="project">
+        <header>
+          <h3>Independent PC Hardware Technician</h3>
+          <span class="meta">Self-employed, Pasig City, 2021 to present</span>
+        </header>
+        <ul>
+          <li>Build, upgrade, maintain, and troubleshoot desktop PCs for clients, friends, and a family business, from parts sourcing and component selection to assembly.</li>
+          <li>Diagnosed and repaired hardware faults at the component level, including switch and IC replacement.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section aria-labelledby="skills">
+      <h2 id="skills">Skills</h2>
+      <table class="skills">
+        <tbody>
+          <tr><th scope="row">Programming</th><td>Python, Java, C++ (Arduino), SQL, Luau</td></tr>
+          <tr><th scope="row">Embedded and hardware</th><td>Arduino, Raspberry Pi, ESP32, sensor interfacing, signal filtering, wireless communication (ESP-NOW), multiplexer circuits, soldering, PCB assembly, PC building and repair</td></tr>
+          <tr><th scope="row">Tools</th><td>Git and GitHub, Claude Code (AI-assisted development), Arduino IDE, Rojo, Roblox Studio, Linux, Windows</td></tr>
+          <tr><th scope="row">Networking</th><td>Networking fundamentals (Cisco CCST)</td></tr>
+          <tr><th scope="row">Creative</th><td>Traditional illustration and ink drawing, tattoo design; learning digital 2D art and 3D modelling</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-labelledby="certs">
+      <h2 id="certs">Licenses and certifications</h2>
+      <table class="certs">
+        <tbody>
+          <tr><td>Cisco Certified Support Technician (CCST) Networking, Cisco</td><td>Nov 2026</td></tr>
+          <tr><td>Information Technology Specialist: Artificial Intelligence, Certiport</td><td>Nov 2026</td></tr>
+          <tr><td>CCNA: Enterprise Networking, Security, and Automation, Cisco NetAcad (course)</td><td>Jul 2026</td></tr>
+          <tr><td>CCNA: Switching, Routing, and Wireless Essentials, Cisco NetAcad (course)</td><td>Jul 2026</td></tr>
+          <tr><td>CCNA: Introduction to Networks, Cisco NetAcad (course)</td><td>Feb 2026</td></tr>
+          <tr><td>AWS Academy Graduate: Cloud Foundations (training badge)</td><td>Nov 2025</td></tr>
+          <tr><td>Information Technology Specialist: Java, Certiport</td><td>Mar 2025</td></tr>
+          <tr><td>Information Technology Specialist: Python, Certiport</td><td>Mar 2025</td></tr>
+          <tr><td>Autodesk Certified User: AutoCAD</td><td>Nov 2024</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <table>
+      <caption>Revision history</caption>
+      <tbody>
+        <tr><th scope="row">Rev 0.1</th><td>Nov 2026: first release. Project pages with photos and demos are on the way.</td></tr>
+      </tbody>
+    </table>
+  </footer>
+
+</div>
+</body>
+</html>
